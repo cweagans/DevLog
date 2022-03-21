@@ -1,0 +1,26 @@
+<h1 id="rsync"><a aria-hidden="true" class="anchor-heading" href="#rsync"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Rsync</h1>
+<h2 id="rsync-for-system-backups"><a aria-hidden="true" class="anchor-heading" href="#rsync-for-system-backups"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>rsync for system backups</h2>
+<h3 id="general-syntax-for-dummies"><a aria-hidden="true" class="anchor-heading" href="#general-syntax-for-dummies"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>General syntax for dummies</h3>
+<blockquote>
+<p>rsync [options] from [to]</p>
+</blockquote>
+<h3 id="tags-im-using-and-what-they-do"><a aria-hidden="true" class="anchor-heading" href="#tags-im-using-and-what-they-do"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Tags im using and what they do</h3>
+<ul>
+<li><strong>-a</strong> <em>Archive mode</em></li>
+<li><strong>-A</strong> <em>Preserved Active control Lists (ACL's)</em></li>
+<li><strong>-X</strong> <em>Preserves extended attributes</em></li>
+<li><strong>-v</strong> <em>Verbose output of actions</em></li>
+<li><strong>-z</strong> <em>Compress files in transit</em></li>
+</ul>
+<h3 id="extended-flags"><a aria-hidden="true" class="anchor-heading" href="#extended-flags"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Extended Flags</h3>
+<ul>
+<li><strong>--delete</strong> <em>Files deleted from FROM removed from TO without being explicitly cited</em></li>
+<li><strong>--exclude={/home/bryan/example/*}</strong> <em>Exclude files from specific directories</em></li>
+</ul>
+<h3 id="my-from-directory"><a aria-hidden="true" class="anchor-heading" href="#my-from-directory"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>My 'FROM' Directory</h3>
+<p><code>/home/bryan</code></p>
+<h3 id="my-to-location"><a aria-hidden="true" class="anchor-heading" href="#my-to-location"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>My 'TO' Location</h3>
+<blockquote>
+<p><em>Must mount the backup storage device for external backup</em></p>
+</blockquote>
+<p><code>/mnt/</code></p>

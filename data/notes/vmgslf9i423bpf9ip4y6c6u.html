@@ -1,0 +1,8 @@
+<h1 id="cmd-sub"><a aria-hidden="true" class="anchor-heading" href="#cmd-sub"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Cmd Sub</h1>
+<h4 id="command-substitution"><a aria-hidden="true" class="anchor-heading" href="#command-substitution"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Command Substitution</h4>
+<ul>
+<li><code>( [command list] )</code></li>
+<li>Execute the list of commands in a subshell.</li>
+<li>This is exactly the same thing as the command grouping above, only, the commands are executed in a subshell. Any code that affects the environment such as variable assignments, cd, export, etc. do not affect the main script's environment but are scoped within the brackets.</li>
+<li><strong>*Note:</strong> You do not need a <code>;</code> before the closing <code>)</code>.</li>
+</ul>

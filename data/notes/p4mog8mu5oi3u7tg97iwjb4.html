@@ -1,0 +1,58 @@
+<h1 id="setup"><a aria-hidden="true" class="anchor-heading" href="#setup"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Setup</h1>
+<h2 id="proxmox-setup-steps"><a aria-hidden="true" class="anchor-heading" href="#proxmox-setup-steps"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Proxmox setup steps</h2>
+<ol start="0">
+<li><a href="https://youtu.be/azORbxrItOo">Great installation video</a></li>
+<li><a href="https://proxmox.com/en/downloads">download iso</a></li>
+<li>Burn iso to a flashdrive
+<ol>
+<li>linux: <code>dd</code> command</li>
+<li>Windows: <a href="https://rufus.ie/en/">rufus</a></li>
+<li>MacOS: <a href="https://www.balena.io/etcher/">Etcher</a></li>
+</ol>
+</li>
+<li>Put flash drive into target machine</li>
+<li>Boot from the flash drive
+<ol>
+<li>or using <a href="/DevLog/notes/yhczn63jacy8z6vk0erxr3w">iLO</a></li>
+</ol>
+</li>
+<li>Follow the prompts and fill in the information
+<ol>
+<li>Note: i did have to configure my disks in some of the boot menus to make a single logical volume RAID 5 configuration</li>
+<li>The in the Proxmox installer i just selected ext4 for the file system</li>
+<li>Will use ZFS on <a href="/DevLog/notes/82umkyemhjtdlkjgew0a2km">Fafnir</a></li>
+</ol>
+</li>
+<li>fill in network information
+<ol>
+<li>Much of it can be gleaned from your router console</li>
+<li><code>ifconfig get default | grep gateway</code> for the default gateway</li>
+<li>for MacOS to find <a href="/DevLog/notes/84pi5u7op8dg5x5x008k304">DNS</a> server just search for <code>DNS</code> in <em>system preferences</em></li>
+</ol>
+</li>
+<li>Once proxmox is finished bootstrapping and restarts the server, remove the flash media</li>
+<li>if screen loads to a console then you can just transition back to your main machine and use the web interface to finish.</li>
+<li>management console is at: <code>https://#.#.#.#:8006</code> (replace <code>#</code> with valid ipv4 address)</li>
+<li>connection will be unsecure and that's okay, proceed anyhow</li>
+<li>login as <code>root</code> with the password you previously set.</li>
+<li>Ignore subscription popup, its FOSS unless you want enterprise subscription</li>
+</ol>
+<h2 id="post-install-configuration"><a aria-hidden="true" class="anchor-heading" href="#post-install-configuration"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Post Install Configuration</h2>
+<p>TODO reformat this section by separating out the steps to their own notes and making this list more legible</p>
+<ol>
+<li><a href="/DevLog/notes/ghqfq24dh7bjkpabdqvstm6#updates-repository">Configuration</a></li>
+<li><code>apt-get install neovim ranger</code></li>
+<li><a href="/DevLog/notes/ghqfq24dh7bjkpabdqvstm6#enable-iommu">Configuration</a></li>
+<li><a href="/DevLog/notes/ghqfq24dh7bjkpabdqvstm6#make-proxmox-vlan-aware">Configuration</a></li>
+<li><a href="/DevLog/notes/ghqfq24dh7bjkpabdqvstm6#setup-linux-bridge-for-virtual-machines-separate-from-management-layer">Configuration</a>
+<ol>
+<li><a href="/DevLog/notes/ghqfq24dh7bjkpabdqvstm6#make-network-bridge-for-virtual-machines">Configuration</a></li>
+</ol>
+</li>
+<li><a href="/DevLog/notes/ghqfq24dh7bjkpabdqvstm6#download-windows-virtio-drivers">Configuration</a></li>
+<li><a href="/DevLog/notes/ghqfq24dh7bjkpabdqvstm6#setup-nfs-for-backups">Configuration</a>
+<ol>
+<li><a href="/DevLog/notes/ghqfq24dh7bjkpabdqvstm6#schedule-backups">Configuration</a></li>
+</ol>
+</li>
+</ol>

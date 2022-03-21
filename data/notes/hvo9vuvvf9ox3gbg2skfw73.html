@@ -1,0 +1,7 @@
+<h1 id="05"><a aria-hidden="true" class="anchor-heading" href="#05"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>05</h1>
+<h4 id="inputs"><a aria-hidden="true" class="anchor-heading" href="#inputs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Inputs</h4>
+<h4 id="notes"><a aria-hidden="true" class="anchor-heading" href="#notes"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Notes</h4>
+<p>If a file in Python is opened without a context manager or is just taken up by a python process then to get it to let go of the file to delete it, open it in python, assign it to a variable then run the close method:</p>
+<pre class="language-python"><code class="language-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'file.txt'</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>

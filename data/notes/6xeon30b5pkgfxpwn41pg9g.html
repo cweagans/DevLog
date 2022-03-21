@@ -1,0 +1,9 @@
+<h1 id="returning-data-you-touched"><a aria-hidden="true" class="anchor-heading" href="#returning-data-you-touched"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Returning Data You Touched</h1>
+<pre class="language-sql"><code class="language-sql"><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> person <span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'Groot'</span><span class="token punctuation">)</span> <span class="token keyword">RETURNING</span> id<span class="token punctuation">;</span>
+<span class="token comment">/*
+ id
+----
+  4
+(1 row)
+*/</span>
+</code></pre>

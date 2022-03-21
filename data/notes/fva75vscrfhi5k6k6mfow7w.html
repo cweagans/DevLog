@@ -1,0 +1,7 @@
+<h1 id="stat"><a aria-hidden="true" class="anchor-heading" href="#stat"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Stat</h1>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> os
+
+<span class="token comment"># get file stats</span>
+stats <span class="token operator">=</span> os<span class="token punctuation">.</span>stat<span class="token punctuation">(</span><span class="token string">'f:/file.txt'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Size of file is'</span><span class="token punctuation">,</span> stats<span class="token punctuation">.</span>st_size<span class="token punctuation">,</span> <span class="token string">'bytes'</span><span class="token punctuation">)</span>
+</code></pre>
